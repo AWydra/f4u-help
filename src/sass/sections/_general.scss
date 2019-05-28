@@ -1,0 +1,74 @@
+.help {
+  min-height: 320px;
+
+  &__article {
+    margin-top: $iconSize;
+  }
+
+  &__link {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    border: solid 2px #ddd;
+    box-shadow: #ddd 0 0 20px;
+    @extend %transition;
+
+    &:hover {
+      box-shadow: #ddd 0 0 20px 10px;
+
+      .help {
+        &__icon-container {
+          background-color: darken($mainColor, 15);
+        }
+
+        &__underscore {
+          width: $underscoreWidth + 10%;
+        }
+      }
+    }
+  }
+
+  &__icon {
+    font-size: $iconSize / 2;
+    color: $iconColor;
+
+    &-container {
+      width: $iconSize;
+      height: $iconSize;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $mainColor;
+      border-radius: 50%;
+      @include flex();
+      @extend %transition;
+    }
+  }
+
+  &__title {
+    margin-top: $iconSize / 1.5;
+  }
+
+  &__heading {
+    margin-bottom: 0;
+    text-align: center;
+    color: black;
+  }
+
+  &__underscore {
+    width: $underscoreWidth;
+    height: 0;
+    margin-top: 5px;
+    border-top: $underscore;
+    @extend %transition;
+  }
+
+  &__description {
+    padding: 0 0.5rem;
+    font-size: 1.15rem;
+    color: black;
+    text-align: center;
+    line-height: 1.6;
+  }
+}

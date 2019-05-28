@@ -1,0 +1,10 @@
+$mainColor: #2e8ece;
+$articleBorder: solid 2px #ddd;
+$iconSize: 70px;
+$iconColor: white;
+$underscore: solid 3px $mainColor;
+$underscoreWidth: 20%;
+
+%transition {
+  transition: all 0.2s ease-in-out;
+}
