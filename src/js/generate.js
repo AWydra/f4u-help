@@ -34,12 +34,12 @@ class Generator {
       );
       article.setAttribute("data-title", el.helpTitle.toLowerCase());
       article.innerHTML = `
-                <a href="/${el.id}/${el.slug}/" class="help__link">
+                <a href="${el.id}/${el.slug}/" class="help__link">
                   <div class="help__icon-container">
                     <i class="help__icon ${el.icon}"></i>
                   </div>
                   <div class="help__title">
-                    <h3 class="help__heading h3">${el.helpTitle}</h3>
+                    <h3 class="help__heading h3 px-3">${el.helpTitle}</h3>
                     <hr class="help__underscore">
                     <p class="help__description">
                       ${el.helpDescription}

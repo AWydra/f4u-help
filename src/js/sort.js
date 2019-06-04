@@ -24,9 +24,5 @@ class Sort {
       if (value) this._iso.arrange({ filter: `[data-title*="${value}"]` });
       else this._iso.arrange({ filter: `*` });
     });
-
-    this._sortInput.addEventListener(blur, ev => {
-      this._iso.arrange({ filter: `*` });
-    });
   }
 }

@@ -1,7 +1,7 @@
 class Connection {
-  constructor(obj) {
-    this._categoryUrl = obj.categoryUrl;
-    this._articleUrl = obj.articleUrl;
+  constructor(conf) {
+    this._categoryUrl = conf.categoryUrl;
+    this._articleUrl = conf.articleUrl;
   }
 
   get(url) {
@@ -24,8 +24,6 @@ class Connection {
     return Promise.all([
       this.getCategories(this._categoryUrl),
       this.getArticles(this._articleUrl)
-    ]).then(resp => {
-      console.log(resp);
-    });
+    ]);
   }
 }
