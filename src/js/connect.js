@@ -4,7 +4,7 @@ class Connection {
     this._articleUrl = conf.articleUrl;
   }
 
-  get(url) {
+  _get(url) {
     return new Promise(resolve => {
       return fetch(url)
         .then(response => response.json())
@@ -12,18 +12,18 @@ class Connection {
     });
   }
 
-  getCategories(url) {
-    return this.get(url);
+  _getCategories(url) {
+    return this._get(url);
   }
 
-  getArticles(url) {
-    return this.get(url);
+  _getArticles(url) {
+    return this._get(url);
   }
 
   init() {
     return Promise.all([
-      this.getCategories(this._categoryUrl),
-      this.getArticles(this._articleUrl)
+      this._getCategories(this._categoryUrl),
+      this._getArticles(this._articleUrl)
     ]);
   }
 }

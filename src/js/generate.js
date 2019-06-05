@@ -4,7 +4,7 @@ class Generator {
     this._articles = conf.articles;
   }
 
-  createTabs() {
+  _createTabs() {
     const container = document.querySelector(".category");
 
     this._tabs.forEach(el => {
@@ -19,7 +19,7 @@ class Generator {
     });
   }
 
-  createArticles() {
+  _createArticles() {
     const container = document.querySelector("#sort");
 
     this._articles.forEach(el => {
@@ -51,7 +51,7 @@ class Generator {
   }
 
   init() {
-    this.createArticles();
-    this.createTabs();
+    this._createArticles();
+    this._createTabs();
   }
 }
