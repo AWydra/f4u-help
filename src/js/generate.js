@@ -21,6 +21,7 @@ class Generator {
 
   _createArticles() {
     const container = document.querySelector("#sort");
+    const docFrag = document.createDocumentFragment();
 
     this._articles.forEach(el => {
       const article = document.createElement("article");
@@ -42,12 +43,14 @@ class Generator {
                     <h3 class="help__heading h3 px-3">${el.helpTitle}</h3>
                     <hr class="help__underscore">
                     <p class="help__description">
-                      ${el.helpDescription}
+                      ${el.helpDescription ? el.helpDescription : ""}
                     </p>
                   </div>
                 </a>`;
-      container.appendChild(article);
+      docFrag.appendChild(article);
     });
+
+    container.appendChild(docFrag);
   }
 
   init() {

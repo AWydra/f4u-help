@@ -11,10 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  const otter = new Connection({
-    categoryUrl: config.connection.categoryUrl,
-    articleUrl: config.connection.articleUrl
-  });
+  const otter = new Connection(config.connection);
 
   otter
     .init()
@@ -23,14 +20,17 @@ document.addEventListener("DOMContentLoaded", () => {
       generator.init();
     })
     .then(() => {
-      const sort = new Sort({
-        container: config.sort.container,
-        input: config.sort.input,
-        items: config.sort.items
-      });
+      const sort = new Sort(config.sort);
       sort.init();
     })
     .then(() => {
       SEMICOLON.portfolio.filterInit();
-    });
+    })
+    .catch(err =>
+      Swal.fire({
+        title: "Failed to load data",
+        text: "Try again later or contact our support",
+        type: "error"
+      })
+    );
 });
