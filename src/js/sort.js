@@ -15,6 +15,7 @@ class Sort {
         const value = ev.target.dataset.sort;
 
         this._iso.arrange({ filter: value });
+        this._sortInput.value = "";
       });
     });
   }
@@ -22,6 +23,15 @@ class Sort {
   _onInput() {
     this._sortInput.addEventListener("keyup", ev => {
       const value = ev.target.value.toLowerCase();
+
+      if (ev.keyCode === 13) {
+        this._sortContainer.scrollIntoView({
+          behavior: "smooth"
+        });
+
+        setTimeout(() => this._sortInput.blur(), 500);
+        return;
+      }
 
       if (value) this._iso.arrange({ filter: `[data-title*="${value}"]` });
       else this._iso.arrange({ filter: `*` });
