@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .then(() => {
       SEMICOLON.portfolio.filterInit();
+      document.querySelector(".category__btn").click();
     })
     .catch(err =>
       Swal.fire({

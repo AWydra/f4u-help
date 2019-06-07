@@ -6,6 +6,7 @@ class Generator {
 
   _createTabs() {
     const container = document.querySelector(".category");
+    const showAll = document.createElement("li");
 
     this._tabs.forEach(el => {
       const li = document.createElement("li");
@@ -13,10 +14,17 @@ class Generator {
 
       li.innerHTML = `<a href="#" class="category__btn" data-sort=".cat-${
         el.id
-      }">${el.name}</a>`;
+      }">${el.name.replace("HELP ", "")}</a>`;
 
       container.appendChild(li);
     });
+
+    //Add sort all btn
+    showAll.id = "sort-all";
+    showAll.classList.add("category__item");
+    showAll.innerHTML =
+      '<a href="#" class="category__btn" data-sort="*">Show All</a>';
+    container.appendChild(showAll);
   }
 
   _createArticles() {

@@ -44,9 +44,7 @@ include($page . 'menu.php');
             </div>
           </div>
           <ul class="category portfolio-filter mb-0 clearfix">
-            <li class="category__item activeFilter">
-              <a href="#" class="category__btn" data-sort="*">Show All</a>
-            </li>
+            <!-- Categories -->
           </ul>
           <div class="clear"></div>
           <div id="sort" class="help row clearfix">
