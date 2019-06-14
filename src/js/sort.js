@@ -1,6 +1,7 @@
 class Sort {
   constructor(sort) {
     this._sortBtns = document.querySelectorAll("[data-sort]");
+    this._sortAll = document.querySelector(`${sort.sortAll}`);
     this._sortContainer = document.querySelector(`${sort.container}`);
     this._sortInput = document.querySelector(`${sort.input}`);
     this._iso = new Isotope(this._sortContainer, {
@@ -23,6 +24,9 @@ class Sort {
   _onInput() {
     this._sortInput.addEventListener("keyup", ev => {
       const value = ev.target.value.toLowerCase();
+
+      document.querySelector(".activeFilter").classList.remove("activeFilter");
+      this._sortAll.classList.add("activeFilter");
 
       if (ev.keyCode === 13) {
         this._sortContainer.scrollIntoView({

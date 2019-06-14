@@ -9,7 +9,7 @@
   <?php include($page . 'head.php'); ?>
 
   <meta name="description" content="" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="resources/css/style.css" />
 
   <!-- Document Title
     ============================================= -->
@@ -65,7 +65,7 @@ include($page . 'menu.php');
   </div>
   <!-- #wrapper end -->
 
-  <script src="js/main.js"></script>
+  <script src="resources/js/main.js"></script>
 </body>
 
 </html>

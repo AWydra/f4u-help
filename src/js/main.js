@@ -1,13 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
   const config = {
     connection: {
-      categoryUrl: "//fastcast4u.com/help2/app/api/getCategories.php",
-      articleUrl: "//fastcast4u.com/help2/app/api/getArticles.php"
+      categoryUrl: "app/api/getCategories.php",
+      articleUrl: "app/api/getArticles.php"
     },
     sort: {
       container: "#sort",
       input: "#article-search",
-      items: ".help__article"
+      items: ".help__article",
+      sortAll: "#sort-all"
     }
   };
 
