@@ -1,5 +1,6 @@
 <?php
-  $page = '../';
+  $page = 'https://fastcast4u.com/';
+  $catalog = "help2/"
 ?>
 
 <!DOCTYPE html>
@@ -9,7 +10,7 @@
   <?php include($page . 'head.php'); ?>
 
   <meta name="description" content="" />
-  <link rel="stylesheet" href="resources/css/style.css" />
+  <link rel="stylesheet" href="<?= $page.$catalog ?>resources/css/style.css" />
 
   <!-- Document Title
     ============================================= -->
@@ -65,7 +66,7 @@ include($page . 'menu.php');
   </div>
   <!-- #wrapper end -->
 
-  <script src="resources/js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

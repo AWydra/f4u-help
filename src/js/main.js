@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const config = {
     connection: {
-      categoryUrl: "app/api/getCategories.php",
-      articleUrl: "app/api/getArticles.php"
+      categoryUrl: "https://fastcast4u.com/help2/app/api/getCategories.php",
+      articleUrl: "https://fastcast4u.com/help2/app/api/getArticles.php"
     },
     sort: {
       container: "#sort",
